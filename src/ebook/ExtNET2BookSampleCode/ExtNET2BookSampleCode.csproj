@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{42E88A6F-FBA2-40F7-971A-919153AA622C}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ExtNET2BookSampleCode</RootNamespace>
+    <AssemblyName>ExtNET2BookSampleCode</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>false</UseIISExpress>
+    <MvcProjectUpgradeChecked>true</MvcProjectUpgradeChecked>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ext.Net">
+      <HintPath>..\Compiled Ext.NET 2.1\Ext.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="Ext.Net.Utilities">
+      <HintPath>..\Compiled Ext.NET 2.1\Ext.Net.Utilities.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\Compiled Ext.NET 2.1\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Transformer.NET">
+      <HintPath>..\Compiled Ext.NET 2.1\Transformer.NET.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Ajax\ComponentLoaders\LoadComponent.ashx.cs">
+      <DependentUpon>LoadComponent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\DirectEvents\WebServices\ServerTimeHandler.ashx.cs">
+      <DependentUpon>ServerTimeHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\DirectEvents\WebServices\ServerTimeService.asmx.cs">
+      <DependentUpon>ServerTimeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ajax\DirectMethods\DynamicallyGeneratedControls\GenerateComponent.ashx.cs">
+      <DependentUpon>GenerateComponent.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\DirectMethods\WebServices\BrowserScoreCard.cs" />
+    <Compile Include="Ajax\DirectMethods\WebServices\Handler.ashx.cs">
+      <DependentUpon>Handler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Ajax\DirectMethods\WebServices\ServerTimeService.asmx.cs">
+      <DependentUpon>ServerTimeService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ajax\DirectMethods\WebServices\ServerTimeServiceAsJson.asmx.cs">
+      <DependentUpon>ServerTimeServiceAsJson.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ajax\UserControls\DirectMethod.Master.cs">
+      <DependentUpon>DirectMethod.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Ajax\UserControls\DirectMethod.Master.designer.cs">
+      <DependentUpon>DirectMethod.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\FinancialGridInViewPortController.cs" />
+    <Compile Include="Controllers\FinancialGridViaExtensionMethodBasicController.cs" />
+    <Compile Include="Controllers\FinancialGridViaExtensionMethodController.cs" />
+    <Compile Include="Custom\Builder\FinancialGridBuilder.cs" />
+    <Compile Include="Custom\Components\BuilderFactory.cs" />
+    <Compile Include="Custom\Components\FinancialGrid.cs" />
+    <Compile Include="Custom\Components\FinancialGridBasicWithConfigOptionsOnly.cs" />
+    <Compile Include="Custom\Components\FinancialGridDirectEvents.cs" />
+    <Compile Include="Custom\Components\FinancialGridListeners.cs" />
+    <Compile Include="Custom\Components\FinancialGridMvcSupport.cs" />
+    <Compile Include="Custom\Components\FinancialGridMvcSupportBasic.cs" />
+    <Compile Include="Custom\Components\MyApp.cs" />
+    <Compile Include="Custom\Plugins\FinancialGrid.cs" />
+    <Compile Include="Custom\Plugins\PageSizeChangerPlugin.cs" />
+    <Compile Include="Shared\CompanyData.cs" />
+    <Compile Include="Shared\FinancialData.ashx.cs">
+      <DependentUpon>FinancialData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Shared\Trees\FolderTreeNodes.cs" />
+    <Compile Include="Shared\Trees\NaturalOrderComparer.cs" />
+    <Compile Include="Controllers\DirectEventExampleController.cs" />
+    <Compile Include="Controllers\IconTreeController.cs" />
+    <Compile Include="Controllers\ServerTimeController.cs" />
+    <Compile Include="ControlsOverview\Toolbars\ToolbarFromCodeBehind.aspx.cs">
+      <DependentUpon>ToolbarFromCodeBehind.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ControlsOverview\Toolbars\ToolbarFromCodeBehind.aspx.designer.cs">
+      <DependentUpon>ToolbarFromCodeBehind.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ComboBox\HtmlSelect\CountryData.ashx.cs">
+      <DependentUpon>CountryData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\ComboBox\HtmlSelect\CountryInfo.cs" />
+    <Compile Include="Data\DataView\Simple\Employee.cs" />
+    <Compile Include="Data\DataView\Simple\ServerPagingWithFilteringAndSorting\EmployeesRetriever.ashx.cs">
+      <DependentUpon>EmployeesRetriever.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataView\Simple\ServerPaging\EmployeesRetriever.ashx.cs">
+      <DependentUpon>EmployeesRetriever.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\DataView\Simple\ServerRevealingMoreDataLater\EmployeesRetriever.ashx.cs">
+      <DependentUpon>EmployeesRetriever.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Grids\Shared\CompanyData.cs" />
+    <Compile Include="Data\Grids\Shared\FinancialData.ashx.cs">
+      <DependentUpon>FinancialData.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Grids\Shared\FinancialDataUpdate.ashx.cs">
+      <DependentUpon>FinancialDataUpdate.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\XTemplates\Basic\DataUpdater.ashx.cs">
+      <DependentUpon>DataUpdater.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Data\XTemplates\Basic\DataUpdaterMultiple.ashx.cs">
+      <DependentUpon>DataUpdaterMultiple.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tabs\CompanyData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\ComponentLoaders\Loader.aspx" />
+    <Content Include="Ajax\DirectEvents\ButtonAndPanel.aspx" />
+    <Content Include="Ajax\DirectEvents\Confirmation.aspx" />
+    <Content Include="Ajax\DirectEvents\DirectEventAndUpdateExtensionMethod.aspx" />
+    <Content Include="Ajax\DirectEvents\DirectEventReturningExtNetComponent.aspx" />
+    <Content Include="Ajax\DirectEvents\EventMask.aspx" />
+    <Content Include="Ajax\DirectEvents\EventMaskCustomTargetHtmlElement.aspx" />
+    <Content Include="Ajax\DirectEvents\EventMaskCustomTargetWindow.aspx" />
+    <Content Include="Ajax\DirectEvents\EventMaskCustomTargetWindowBody.aspx" />
+    <Content Include="Ajax\DirectEvents\ExtraParams.aspx" />
+    <Content Include="Ajax\DirectEvents\ExtraParamsInResponse.aspx" />
+    <Content Include="Ajax\DirectEvents\FromAspNetControl.aspx" />
+    <Content Include="Ajax\DirectEvents\WebServices\CallingWebService.aspx" />
+    <Content Include="Ajax\DirectEvents\WebServices\ServerTimeService.asmx" />
+    <Content Include="Ajax\DirectMethods\Basic.aspx" />
+    <Content Include="Ajax\DirectMethods\BasicWithCustomNamespace.aspx" />
+    <Content Include="Ajax\DirectMethods\BasicWithDirectMethodConfiguration.aspx" />
+    <Content Include="Ajax\DirectMethods\DynamicallyGeneratedControls\DynamicControl.aspx" />
+    <Content Include="Ajax\DirectMethods\Exceptions\GlobalExceptionHandlers.aspx" />
+    <Content Include="Ajax\DirectMethods\Exceptions\Handled.aspx" />
+    <Content Include="Ajax\DirectMethods\Exceptions\HandledOnServerNotOnClient.aspx" />
+    <Content Include="Ajax\DirectMethods\Exceptions\HandledPattern.aspx" />
+    <Content Include="Ajax\DirectMethods\Exceptions\Unhandled.aspx" />
+    <Content Include="Ajax\DirectMethods\Exceptions\UnhandledWithClientSideFailureHandler.aspx" />
+    <Content Include="Ajax\DirectMethods\StaticWithCustomReturnType.aspx" />
+    <Content Include="Ajax\DirectMethods\StaticWithDirectMethodConfiguration.aspx" />
+    <Content Include="Ajax\DirectMethods\WebServices\CallingWebService.aspx" />
+    <Content Include="Ajax\DirectMethods\WebServices\ServerTimeService.asmx" />
+    <Content Include="Ajax\DirectMethods\WebServices\ServerTimeServiceAsJson.asmx" />
+    <Content Include="Ajax\GetServerTime.aspx" />
+    <Content Include="Ajax\Loader\Child.aspx" />
+    <Content Include="Ajax\Loader\Panel.aspx" />
+    <Content Include="Ajax\PageMethods\PageMethodExample.aspx" />
+    <Content Include="Ajax\UpdatePanel\UpdatePanelComparison.aspx" />
+    <Content Include="Ajax\UserControls\DirectMethod.Master" />
+    <Content Include="Ajax\UserControls\DirectMethodFromMaster.aspx" />
+    <Content Include="Ajax\UserControls\GetName.ascx" />
+    <Content Include="Ajax\UserControls\GetName.aspx" />
+    <Content Include="App_Readme\Ext.NET.CHANGELOG.txt" />
+    <Content Include="App_Readme\Ext.NET.LICENSE.txt" />
+    <Content Include="App_Readme\Ext.NET.README.txt" />
+    <Content Include="App_Readme\Ext.NET.Utilities.LICENSE.txt" />
+    <Content Include="App_Readme\Ext.NET.Utilities.README.txt" />
+    <Content Include="App_Readme\Transformer.NET.LICENSE.txt" />
+    <Content Include="App_Readme\Transformer.NET.README.txt" />
+    <Content Include="ControlsOverview\Buttons\ButtonAndPanelWithDirectEvent.aspx" />
+    <Content Include="ControlsOverview\Buttons\ButtonWithDirectEvent.aspx" />
+    <Content Include="ControlsOverview\Buttons\ClickListener.aspx" />
+    <Content Include="ControlsOverview\Buttons\PassingCustomConfig.aspx" />
+    <Content Include="ControlsOverview\Buttons\PassingCustomConfigViaUndefinedProperties.aspx" />
+    <Content Include="ControlsOverview\Buttons\PassingExtNetId.aspx" />
+    <Content Include="ControlsOverview\Buttons\SimpleButton.aspx" />
+    <Content Include="ControlsOverview\Buttons\SimpleButtonViaCodeBehind.aspx" />
+    <Content Include="ControlsOverview\Buttons\SplitButtonArrowAlignBottom.aspx" />
+    <Content Include="ControlsOverview\Buttons\UpdatePanelComparison.aspx" />
+    <Content Include="ControlsOverview\Containers\Panel\PanelUsingDockedItems.aspx" />
+    <Content Include="ControlsOverview\Containers\Panel\PanelWithToolBarsOldWay.aspx" />
+    <Content Include="ControlsOverview\Containers\SimpleContainer.aspx" />
+    <Content Include="ControlsOverview\Containers\Tooltips\Tooltips.aspx" />
+    <Content Include="ControlsOverview\Containers\Window\ConstrainedAnimatedWindow.aspx" />
+    <Content Include="ControlsOverview\Containers\Window\PanelToWindow.aspx" />
+    <Content Include="ControlsOverview\Containers\Window\WindowBasicFeatures.aspx" />
+    <Content Include="ControlsOverview\Containers\Window\WindowViaDirectEvent.aspx" />
+    <Content Include="ControlsOverview\Toolbars\ToolbarFromCodeBehind.aspx" />
+    <Content Include="Custom\Builder\BasicGrid.aspx" />
+    <Content Include="Custom\Builder\Resources\grid.js" />
+    <Content Include="Custom\Builder\Resources\style.css" />
+    <Content Include="Custom\Components\FinancialGrid.aspx" />
+    <EmbeddedResource Include="Custom\Components\Resources\FinancialGrid.css" />
+    <EmbeddedResource Include="Custom\Components\Resources\FinancialGrid.js" />
+    <Content Include="Custom\Plugins\FinancialGrid.aspx" />
+    <EmbeddedResource Include="Custom\Plugins\Resources\FinancialGrid.css" />
+    <EmbeddedResource Include="Custom\Plugins\Resources\FinancialGrid.js" />
+    <EmbeddedResource Include="Custom\Plugins\Resources\PageSizeChanger.js" />
+    <Content Include="Data\ComboBox\HtmlSelect\BasicCountryList.aspx" />
+    <Content Include="Data\ComboBox\HtmlSelect\BasicCountryListWithData.aspx" />
+    <Content Include="Data\ComboBox\HtmlSelect\CountryListWithDataPaging.aspx" />
+    <Content Include="Data\ComboBox\HtmlSelect\CountryListWithDataPagingOnServer.aspx" />
+    <Content Include="Data\DataView\Simple\ClientPaging\ClientPaging.aspx" />
+    <Content Include="Data\DataView\Simple\ServerPagingWithFilteringAndSorting\WithFilteringAndSorting.aspx" />
+    <Content Include="Data\DataView\Simple\ServerPaging\ServerPaging.aspx" />
+    <Content Include="Data\DataView\Simple\ServerPaging\ServerPagingPageProxy.aspx" />
+    <Content Include="Data\DataView\Simple\ServerPaging\ServerPagingPageProxyObjectDataSource.aspx" />
+    <Content Include="Data\DataView\Simple\ServerRevealingMoreDataLater\RevealMoreDataLater.aspx" />
+    <Content Include="Data\Grids\ClientSide\CellSelection.aspx" />
+    <Content Include="Data\Grids\ClientSide\Filtering.aspx" />
+    <Content Include="Data\Grids\ClientSide\Grouping.aspx" />
+    <Content Include="Data\Grids\ClientSide\Paging.aspx" />
+    <Content Include="Data\Grids\ClientSide\RowExpander.aspx" />
+    <Content Include="Data\Grids\ClientSide\RowSelectionCheckbox.aspx" />
+    <Content Include="Data\Grids\ClientSide\RowSelectionMulti.aspx" />
+    <Content Include="Data\Grids\ClientSide\Sorting.aspx" />
+    <Content Include="Data\Grids\ClientSide\Summary.aspx" />
+    <Content Include="Data\Grids\ClientSide\SummaryWithGrouping.aspx" />
+    <Content Include="Data\Grids\DataSources\LinqDataSource.aspx" />
+    <Content Include="Data\Grids\ServerSide\CellEditing.aspx" />
+    <Content Include="Data\Grids\ServerSide\CellEditingAutoSave.aspx" />
+    <Content Include="Data\Grids\ServerSide\CellEditingWithServerStuffViaPageProxy.aspx" />
+    <Content Include="Data\Grids\ServerSide\Paging.aspx" />
+    <Content Include="Data\Grids\ServerSide\PagingServerSideFilteringClientSide.aspx" />
+    <Content Include="Data\Grids\ServerSide\RowEditing.aspx" />
+    <Content Include="Data\Grids\ServerSide\RowExpanderViaAshxDirectMethod.aspx" />
+    <Content Include="Data\Grids\ServerSide\RowExpanderViaAshxDirectMethodNestedGrid.aspx" />
+    <Content Include="Data\Grids\ServerSide\RowExpanderViaAshxDirectMethodUsingBin.aspx" />
+    <Content Include="Data\Grids\ServerSide\ServerSidePagingFiltering.aspx" />
+    <Content Include="Data\Grids\ServerSide\ServerSidePagingFilteringUsingPageProxy.aspx" />
+    <Content Include="Data\Grids\Simple\Simple.aspx" />
+    <Content Include="Data\Grids\Simple\SimpleWithNumberColumn.aspx" />
+    <Content Include="Data\Grids\Simple\SimpleWithTemplateAndRowNumberColumns.aspx" />
+    <Content Include="Data\XTemplates\Basic\BasicTemplate.aspx" />
+    <Content Include="Data\XTemplates\Basic\BasicTemplateInlineWithPanel.aspx" />
+    <Content Include="Data\XTemplates\Basic\BasicTemplateWithMultipleXTemplates.aspx" />
+    <Content Include="Forms\Fields\Checkbox.aspx" />
+    <Content Include="Forms\Fields\ComboBox.aspx" />
+    <Content Include="Forms\Fields\DateField.aspx" />
+    <Content Include="Forms\Fields\DropdownField.aspx" />
+    <Content Include="Forms\Fields\HtmlEditor.aspx" />
+    <Content Include="Forms\Fields\NumberField.aspx" />
+    <Content Include="Forms\Fields\TextArea.aspx" />
+    <Content Include="Forms\Fields\TextField.aspx" />
+    <Content Include="Forms\Fields\TimeField.aspx" />
+    <Content Include="Forms\Fields\TriggerField.aspx" />
+    <Content Include="Forms\Layout\FieldContainer.aspx" />
+    <Content Include="Forms\Layout\FieldSet.aspx" />
+    <Content Include="Forms\Layout\FormPanel.aspx" />
+    <Content Include="Forms\Layout\FormPanelWithSubmitToUrl.aspx" />
+    <Content Include="Forms\Layout\RadioGroup.aspx" />
+    <Content Include="Forms\Stores\Store.aspx" />
+    <Content Include="Forms\Validation\AllowBlank.aspx" />
+    <Content Include="Forms\Validation\CombineErrors.aspx" />
+    <Content Include="Forms\Validation\CustomAppearance.aspx" />
+    <Content Include="Forms\Validation\Remote.aspx" />
+    <Content Include="Forms\Validation\VTypes.aspx" />
+    <Content Include="images\employees\101.png" />
+    <Content Include="images\employees\102.png" />
+    <Content Include="images\employees\103.png" />
+    <Content Include="images\employees\104.png" />
+    <Content Include="images\employees\105.png" />
+    <Content Include="images\employees\106.png" />
+    <Content Include="images\employees\107.png" />
+    <Content Include="images\employees\108.png" />
+    <Content Include="images\employees\109.png" />
+    <Content Include="images\employees\110.png" />
+    <Content Include="images\employees\111.png" />
+    <Content Include="images\iconPasteLarge.png" />
+    <Content Include="images\perf\ATT.png" />
+    <Content Include="images\perf\AXP.png" />
+    <Content Include="images\readme.txt" />
+    <Content Include="images\rotary-phone.jpg" />
+    <Content Include="ControlsOverview\MessageBus\MessageBusExample.aspx" />
+    <Content Include="ControlsOverview\Toolbars\SimpleToolbar.aspx" />
+    <Content Include="ControlsOverview\Toolbars\Toolbar.aspx" />
+    <Content Include="Ext.NET.Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Layout\Accordion\AccordionInWestRegion.aspx" />
+    <Content Include="Layout\Accordion\AccordionWithTreePanel.aspx" />
+    <Content Include="Layout\Accordion\Basic.aspx" />
+    <Content Include="Layout\Border\AllRegionsInViewPort.aspx" />
+    <Content Include="Layout\Border\Basic.aspx" />
+    <Content Include="Layout\Border\BasicWithFlex.aspx" />
+    <Content Include="Layout\Border\MoreThanOneOfSameRegion.aspx" />
+    <Content Include="Layout\Border\MultiRegionWithoutNestingBorderLayouts.aspx" />
+    <Content Include="Layout\Border\NestedBorderLayoutAndWindowContainer.aspx" />
+    <Content Include="Layout\Border\SomeRegionsInViewPortInCode.aspx" />
+    <Content Include="Layout\Border\SomeRegionsInViewPortMarkupCodeMix.aspx" />
+    <Content Include="Layout\Border\TwoColumnLayoutInViewPort.aspx" />
+    <Content Include="Layout\Border\UserControlRenderer\UsingUserControls.aspx" />
+    <Content Include="Layout\Border\UserControlRenderer\WestPanel.ascx" />
+    <Content Include="Layout\Border\WeightedRegions.aspx" />
+    <Content Include="Layout\Border\WindowContainer.aspx" />
+    <Content Include="Layout\Border\WithTabPanelCenter.aspx" />
+    <Content Include="Layout\Column\Basic.aspx" />
+    <Content Include="Layout\Fit\Basic.aspx" />
+    <Content Include="Layout\HBox\AllInOne.aspx" />
+    <Content Include="Layout\HBox\EqualHeightAndSplitColumns.aspx" />
+    <Content Include="Layout\VBox\Centering.aspx" />
+    <Content Include="Layout\VBox\Reordering.aspx" />
+    <Content Include="Tabs\Basic.aspx" />
+    <Content Include="Tabs\BasicPlusGrid.aspx" />
+    <Content Include="Tabs\BasicPlusGridPlusBorder.aspx" />
+    <Content Include="Tabs\DynamicPanel.aspx" />
+    <Content Include="Tabs\PlainTabs.aspx" />
+    <Content Include="Tabs\TabBar.aspx" />
+    <Content Include="Tabs\TabMenu.aspx" />
+    <Content Include="Tabs\TabScrollerMenu.aspx" />
+    <Content Include="Trees\AsyncLoading.aspx" />
+    <Content Include="Trees\AsyncLoadingTreeGrid.aspx" />
+    <Content Include="Trees\AsyncLoadingWithCustomAttributes.aspx" />
+    <Content Include="Trees\AsyncLoadingWithMultipleFields.aspx" />
+    <Content Include="Trees\BasicTreePanel.aspx" />
+    <Content Include="Trees\BasicTreePanelPopulatedByDirectoryReading.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\DirectEventExample\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ServerTime\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\ComponentLoaders\LoadComponent.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\DirectEvents\WebServices\ServerTimeHandler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\DirectMethods\DynamicallyGeneratedControls\GenerateComponent.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ajax\DirectMethods\WebServices\Handler.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\ComboBox\HtmlSelect\CountryData.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Grids\Shared\FinancialData.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\Grids\Shared\FinancialDataUpdate.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\DataView\Simple\ServerPaging\EmployeesRetriever.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\DataView\Simple\ServerPagingWithFilteringAndSorting\EmployeesRetriever.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\DataView\Simple\ServerRevealingMoreDataLater\EmployeesRetriever.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\XTemplates\Basic\DataUpdater.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data\XTemplates\Basic\DataUpdaterMultiple.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Shared\FinancialData.ashx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FinancialGridViaExtensionMethodBasic\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FinancialGridInViewPort\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\FinancialGridViaExtensionMethod\Index.cshtml" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60006</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

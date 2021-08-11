@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<example>
+  <description>
+    <![CDATA[Demonstrates how to create a grid from Array data]]>
+  </description>
+  <tags>livesearch,livesearchgridpanel,livesearchtoolbar,toolbar,plugin,grid,gridpanel,renderer,regexp,statusbar,ux</tags>
+</example>

@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2000
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "README", "README", "{A01898D6-FEDC-42C2-BB6E-BAF2ACE7F54F}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compiled Ext.NET 2", "Compiled Ext.NET 2", "{98C1F3A1-F792-42C5-A395-1FE85D87F128}"
+	ProjectSection(SolutionItems) = preProject
+		..\Compiled Ext.NET 2\Ext.Net.dll = ..\Compiled Ext.NET 2\Ext.Net.dll
+		..\Compiled Ext.NET 2\Ext.Net.pdb = ..\Compiled Ext.NET 2\Ext.Net.pdb
+		..\Compiled Ext.NET 2\Ext.Net.Utilities.dll = ..\Compiled Ext.NET 2\Ext.Net.Utilities.dll
+		..\Compiled Ext.NET 2\Ext.Net.Utilities.xml = ..\Compiled Ext.NET 2\Ext.Net.Utilities.xml
+		..\Compiled Ext.NET 2\Ext.Net.xml = ..\Compiled Ext.NET 2\Ext.Net.xml
+		..\Compiled Ext.NET 2\Newtonsoft.Json.dll = ..\Compiled Ext.NET 2\Newtonsoft.Json.dll
+		..\Compiled Ext.NET 2\Newtonsoft.Json.xml = ..\Compiled Ext.NET 2\Newtonsoft.Json.xml
+		..\Compiled Ext.NET 2\Transformer.NET.dll = ..\Compiled Ext.NET 2\Transformer.NET.dll
+		..\Compiled Ext.NET 2\Transformer.NET.xml = ..\Compiled Ext.NET 2\Transformer.NET.xml
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExtNET2BookSampleCode", "ExtNET2BookSampleCode\ExtNET2BookSampleCode.csproj", "{42E88A6F-FBA2-40F7-971A-919153AA622C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{42E88A6F-FBA2-40F7-971A-919153AA622C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{42E88A6F-FBA2-40F7-971A-919153AA622C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{42E88A6F-FBA2-40F7-971A-919153AA622C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{42E88A6F-FBA2-40F7-971A-919153AA622C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FCBEE9DB-F54F-4511-8716-9B3ED3FF619F}
+	EndGlobalSection
+EndGlobal

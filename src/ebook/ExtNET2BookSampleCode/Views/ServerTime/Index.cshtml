@@ -1,0 +1,35 @@
+﻿@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Server Time</title>
+</head>
+	<body>
+		@Html.X().ResourceManager()
+		
+		@(Html.X().Button()
+			.Text("Get Server Time")
+			.DirectEvents(directEvents => directEvents.Click.Url = Url.Action("GetTime"))
+		)
+
+		<!-- or -->
+		@(Html.X().Button()
+			.Text("Get Server Time")
+			.DirectClickUrl(Url.Action("GetTime"))
+		)
+
+		<!-- or -->
+		@(Html.X().Button()
+			.Text("Get Server Time")
+			.DirectClickAction("GetTime")
+		)
+		
+		@(Html.X().Button().Text("Update")
+			.Handler("App.direct.GetServerTime();"))
+
+		@Html.X().Label().ID("Label1").Text("Updated from server")
+
+	</body>
+</html>

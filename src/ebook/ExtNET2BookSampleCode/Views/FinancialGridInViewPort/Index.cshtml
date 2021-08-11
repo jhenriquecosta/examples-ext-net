@@ -1,0 +1,15 @@
+﻿@using ExtNET2BookSampleCode.Custom.Components
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	@Html.X().ResourceManager().Theme(Theme.Gray)
+	
+	@Html.X().Viewport().Items(items => items.Add(new FinancialGrid()))
+</body>
+</html>

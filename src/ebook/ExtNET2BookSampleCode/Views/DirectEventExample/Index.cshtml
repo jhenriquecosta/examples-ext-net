@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Ext.NET Example</title>
+</head>
+<body>    
+    @Html.X().ResourceManager().Theme(Theme.Gray)
+
+    @(Html.X().Window()
+        .Title("Welcome to Ext.NET 2.1")
+        .Height(215)
+        .Width(350)
+        .Layout(LayoutType.Fit)
+        .Items(Html.X().FormPanel()
+            .Layout(LayoutType.Anchor)
+            .DefaultAnchor("100%")
+            .Border(false)
+            .BodyPadding(5)
+            .Items(Html.X().TextArea()
+                .ID("message")
+                .EmptyText(">> Enter a Message Here <<")
+                .FieldLabel("Text Message")
+                .Height(85)
+            )
+            .Buttons(
+                Html.X().Button()
+                    .Text("Submit")
+                    .Icon(Icon.Accept)
+                    .DirectClickAction("Notify", "DirectEventExample")
+            )
+        )
+    )
+</body>
+</html>

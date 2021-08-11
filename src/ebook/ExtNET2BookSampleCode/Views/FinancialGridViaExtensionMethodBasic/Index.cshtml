@@ -1,0 +1,16 @@
+﻿@using ExtNET2BookSampleCode.Custom.Components
+@{
+	Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+</head>
+<body>
+	@Html.X().ResourceManager().Theme(Theme.Gray)
+
+	<h2>Using basic extension method to use the Financial Grid directly</h2>
+	@Html.FinancialGridBasic().Height(300).Width(500)
+</body>
+</html>

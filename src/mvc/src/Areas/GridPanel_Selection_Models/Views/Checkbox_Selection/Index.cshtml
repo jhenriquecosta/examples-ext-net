@@ -1,0 +1,97 @@
+@model Ext.Net.MVC.Examples.Areas.GridPanel_Selection_Models.Models.Checkbox_SelectionModel
+@{
+    ViewBag.Title = "GridPanel with Checkbox Selection Model - Ext.NET MVC Examples";
+    Layout = "~/Views/Shared/_BaseLayout.cshtml";
+    var X = Html.X();
+}
+
+@section headtag
+{
+    <script>
+        var template = '<span style="color:{0};">{1}</span>';
+
+        var change = function (value) {
+            return Ext.String.format(template, (value > 0) ? "green" : "red", value);
+        };
+
+        var pctChange = function (value) {
+            return Ext.String.format(template, (value > 0) ? "green" : "red", value + "%");
+        };
+    </script>
+}
+
+@section example
+{
+    <h1>GridPanel with Checkbox Selection Model</h1>
+
+    @(X.GridPanel()
+        .ID("GridPanel1")
+        .Title("Company List")
+        .Collapsible(true)
+        .Width(600)
+        .Store(X.Store()
+            .PageSize(10)
+            .Model(X.Model()
+                .IDProperty("ID")
+                .Fields("ID", "Name", "Price", "Change", "PctChange")
+            )
+            .DataSource(Model.Companies)
+        )
+        .ColumnModel(
+            X.Column()
+                .Text("Company")
+                .DataIndex("Name")
+                .Resizable(false)
+                .MenuDisabled(true)
+                .Flex(1),
+
+            X.Column()
+                .Text("Price")
+                .Width(75)
+                .DataIndex("Price")
+                .Renderer(RendererFormat.UsMoney),
+
+             X.Column()
+                .Text("Change")
+                .Width(75)
+                .DataIndex("Change")
+                .Renderer("change"),
+
+             X.Column()
+                .Text("Change")
+                .Width(75)
+                .DataIndex("PctChange")
+                .Renderer("pctChange")
+        )
+        .BottomBar(X.PagingToolbar()
+            .DisplayInfo(false)
+            .HideRefresh(true)
+            .Items(
+                X.Button()
+                    .Text("Submit Selected Records")
+                    .DirectEvents(de =>
+                    {
+                        de.Click.Action = "Submit";
+                        de.Click.EventMask.ShowMask = true;
+                        de.Click.ExtraParams.Add(new Parameter()
+                        {
+                            Name = "selection",
+                            Value = "App.GridPanel1.getSelectionSubmit().getSelectionModelField().getValue()",
+                            Mode = ParameterMode.Raw
+                        });
+                    })
+            )
+
+        )
+        .SelectionModel(
+            X.CheckboxSelectionModel()
+                .Mode(SelectionMode.Multi)
+                .SelectedRows(rows => rows.AddRange(Model.InitiallySelectedRows))
+            )
+
+    )
+
+    <div style="width: 590px; border: 1px solid gray; padding: 5px;">
+        @X.Label().ID("Label1")
+    </div>
+}
